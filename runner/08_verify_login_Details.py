@@ -10,6 +10,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
+
         if request.form.get('USERNAME') == 'admin' and request.form.get('PASSWORD') == 'password':
             return render_template("homepage.html")
         else:
